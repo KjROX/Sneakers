@@ -29,6 +29,7 @@ body {
   margin-right: 0.5rem;
 }
 #logo {
+  cursor: pointer;
 }
 .second-div {
 }
@@ -106,6 +107,11 @@ main {
   background-color: hsl(223, 64%, 98%);
   border-radius: 1rem;
 }
+.quantity button {
+  border: none;
+  background-color: hsl(223, 64%, 98%);
+  cursor: pointer;
+}
 .add-to-cart {
   border: none;
   color: white;
@@ -117,6 +123,7 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 1rem;
+  cursor: pointer;
 }
 .add-to-cart img {
   color: white;
