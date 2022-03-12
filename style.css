@@ -152,9 +152,8 @@ main {
   border-radius: 1rem;
   cursor: pointer;
 }
-.add-to-cart img {
+.cart {
   color: white;
-
   margin-right: 1.5rem;
 }
 .add-to-cart h3 {
