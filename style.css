@@ -3,6 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
 .main-head {
   box-shadow: 0rem 1rem 1rem rgba(0, 0, 0, 0.1);
   z-index: 2;
@@ -13,7 +19,7 @@
   margin: auto;
   display: flex;
   align-items: center;
-  min-height: 10vh;
+  min-height: 8vh;
   padding: 0.5rem 0rem;
   justify-content: space-between;
 }
@@ -27,21 +33,97 @@
 .second-div {
 }
 .cart {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.8rem;
+  width: 1.8rem;
   margin: 0rem 1rem;
 }
 .dp {
-  height: 1.8rem;
-  width: 1.8rem;
+  height: 2rem;
+  width: 2rem;
 }
 main {
-  min-height: 90vh;
+  min-height: 92vh;
+  padding-bottom: 5rem;
 }
 .hero-image {
-  background: url(./images/image-product-1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
+  object-fit: cover;
+}
+.hero-intro {
+  width: 90%;
+  margin: auto;
+}
+.hero-intro h3 {
+  color: hsl(26, 100%, 55%);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 1.5rem 0rem;
+}
+.hero-intro h1 {
+  color: hsl(0, 0%, 0%);
+  font-size: 3rem;
+}
+.hero-intro p {
+  color: hsl(219, 9%, 45%);
+  font-size: 1.6rem;
+  margin: 2rem 0rem;
+}
+.price {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.discount {
+  display: flex;
+  align-items: center;
+}
+.discount h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+.discount h3 {
+  margin-left: 2rem;
+  padding: 1rem;
+  background-color: hsl(25, 100%, 94%);
+  color: hsl(26, 100%, 55%);
+  font-size: 1.6rem;
+  border-radius: 1rem;
+}
+.original-price {
+  font-size: 1.6rem;
+  color: hsl(220, 14%, 75%);
+  text-decoration: line-through;
+}
+.quantity {
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: hsl(223, 64%, 98%);
+  border-radius: 1rem;
+}
+.add-to-cart {
+  border: none;
+  color: white;
+  background-color: hsl(26, 100%, 55%);
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+.add-to-cart img {
+  color: white;
+
+  margin-right: 1.5rem;
+}
+.add-to-cart h3 {
+  color: white;
+  font-size: 1.6rem;
 }
