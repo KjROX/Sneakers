@@ -47,7 +47,7 @@ body {
 }
 main {
   min-height: 92vh;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 }
 .hero {
   position: relative;
@@ -101,8 +101,6 @@ main {
 }
 .price {
   display: flex;
-  width: 90%;
-  margin: auto;
   align-items: center;
   justify-content: space-between;
 }
@@ -128,12 +126,11 @@ main {
   text-decoration: line-through;
 }
 .quantity {
-  width: 90%;
-  margin: 2rem auto;
+  margin: 2rem 0rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 0.5rem 2rem;
   background-color: hsl(223, 64%, 98%);
   border-radius: 1rem;
 }
@@ -146,9 +143,8 @@ main {
   border: none;
   color: white;
   background-color: hsl(26, 100%, 55%);
-  width: 90%;
-  margin: auto;
-  padding: 2rem;
+  width: 100%;
+  padding: 0.5rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,8 +159,12 @@ main {
   font-size: 1.6rem;
 }
 @media (min-width: 809px) {
+  .main-head {
+    box-shadow: none;
+  }
   .nav-links {
-    min-height: 10vh;
+    border-bottom: 0.5px solid hsl(220, 14%, 75%);
+    min-height: 15vh;
   }
   .first-div {
     display: flex;
@@ -196,5 +196,45 @@ main {
     margin-left: 2rem;
     height: 4rem;
     width: 4rem;
+  }
+  main {
+    min-height: 60vh;
+    margin-bottom: 0rem;
+  }
+  .hero {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 5rem auto;
+  }
+  .hero-image {
+    width: 80%;
+    height: 70%;
+    padding: 5rem;
+    border-radius: 7rem;
+  }
+  .previous,
+  .next {
+    display: none;
+  }
+  .hero-intro {
+    padding: 5rem;
+  }
+  .price {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .quantity-add-to-cart {
+    display: flex;
+  }
+  .quantity {
+    flex-grow: 1;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    margin-right: 2rem;
+  }
+  .add-to-cart {
+    flex-grow: 1.5;
+    width: auto;
   }
 }
