@@ -52,9 +52,15 @@ main {
 .hero {
   position: relative;
 }
-.hero-image {
+.main-image {
   width: 100%;
   object-fit: cover;
+}
+.thumbnail-image1,
+.thumbnail-image2,
+.thumbnail-image3,
+.thumbnail-image4 {
+  display: none;
 }
 .previous {
   position: absolute;
@@ -198,7 +204,7 @@ main {
     width: 4rem;
   }
   main {
-    min-height: 60vh;
+    min-height: 40vh;
     margin-bottom: 0rem;
   }
   .hero {
@@ -210,8 +216,25 @@ main {
   .hero-image {
     width: 50%;
     padding: 5rem;
-    border-radius: 7rem;
     flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2rem;
+  }
+  .main-image {
+    border-radius: 3rem;
+    width: 90%;
+    grid-column: 1/5;
+    grid-row: 1/4;
+  }
+  .thumbnail-image1,
+  .thumbnail-image2,
+  .thumbnail-image3,
+  .thumbnail-image4 {
+    display: block;
+    width: 50%;
+    border-radius: 0.5rem;
   }
   .previous,
   .next {
