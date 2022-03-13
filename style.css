@@ -208,17 +208,19 @@ main {
     margin: 5rem auto;
   }
   .hero-image {
-    width: 80%;
-    height: 70%;
+    width: 50%;
     padding: 5rem;
     border-radius: 7rem;
+    flex-grow: 1;
   }
   .previous,
   .next {
     display: none;
   }
   .hero-intro {
+    width: 50%;
     padding: 5rem;
+    flex-grow: 1;
   }
   .price {
     flex-direction: column;
