@@ -38,7 +38,10 @@ function handleImageClick(e) {
 
 //eventlisteners
 
-mainHeroImage.addEventListener("click", openModal);
+mainHeroImage.addEventListener("click", () => {
+  images[0].classList.add("opacity");
+  openModal();
+});
 crossSymbol.addEventListener("click", closeModal);
 window.addEventListener("keyup", (e) => {
   if (e.key === `Escape`) {
