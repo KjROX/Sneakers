@@ -6,7 +6,12 @@ const modalWindow = document.querySelector(".modal-outer");
 const crossSymbol = document.querySelector(".close-icon");
 const previousButton = document.querySelector(".previous-icon");
 const nextButton = document.querySelector(".next-icon");
-const images = Array.from(document.querySelectorAll(".thumbnail"));
+const modalThumbnailImages = Array.from(
+  document.querySelectorAll(".thumbnail")
+);
+const mainThumbnailImages = Array.from(
+  document.querySelectorAll(".landing-thumbnail")
+);
 
 //Functions
 
@@ -26,7 +31,7 @@ function imageUpdation(src) {
 }
 
 function handleImageClick(e) {
-  images.forEach((image) => {
+  modalThumbnailImages.forEach((image) => {
     if (image.classList.contains("opacity")) {
       image.classList.remove("opacity");
     }
@@ -39,7 +44,12 @@ function handleImageClick(e) {
 //eventlisteners
 
 mainHeroImage.addEventListener("click", () => {
-  images[0].classList.add("opacity");
+  modalThumbnailImages.forEach((image) => {
+    if (image.classList.contains("opacity")) {
+      image.classList.remove("opacity");
+    }
+  });
+  modalThumbnailImages[0].classList.add("opacity");
   openModal();
 });
 crossSymbol.addEventListener("click", closeModal);
@@ -56,6 +66,21 @@ modalWindow.addEventListener("click", (e) => {
   }
 });
 
-images.forEach((image) => {
+modalThumbnailImages.forEach((image) => {
   image.addEventListener("click", handleImageClick);
+});
+mainThumbnailImages.forEach((image) => {
+  image.addEventListener("click", (e) => {
+    const { src } = e.currentTarget;
+    imageUpdation(src);
+    modalThumbnailImages.forEach((image1) => {
+      if (image1.classList.contains("opacity")) {
+        image1.classList.remove("opacity");
+      }
+      if (image1.src === src) {
+        image1.classList.add("opacity");
+      }
+    });
+    openModal();
+  });
 });
