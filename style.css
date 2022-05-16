@@ -164,6 +164,9 @@ main {
   color: white;
   font-size: 1.6rem;
 }
+.opacity {
+  opacity: 0.5;
+}
 @media (min-width: 809px) {
   .main-head {
     box-shadow: none;
