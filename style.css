@@ -61,6 +61,7 @@ main {
 }
 .landing-image.visible {
   display: block;
+  animation: fadeVisibility 0.5s;
 }
 .thumbnail-image1,
 .thumbnail-image2,
@@ -180,6 +181,15 @@ main {
 }
 .modal-outer {
   display: none;
+}
+@keyframes fadeVisibility {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: opacity linear;
+  }
 }
 @media (min-width: 809px) {
   .main-head {
