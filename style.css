@@ -56,6 +56,12 @@ main {
   width: 100%;
   object-fit: cover;
 }
+.landing-image {
+  display: none;
+}
+.landing-image.visible {
+  display: block;
+}
 .thumbnail-image1,
 .thumbnail-image2,
 .thumbnail-image3,
@@ -63,6 +69,8 @@ main {
   display: none;
 }
 .previous {
+  cursor: pointer;
+  border: none;
   position: absolute;
   top: 22%;
   left: 5%;
@@ -75,6 +83,8 @@ main {
   align-items: center;
 }
 .next {
+  cursor: pointer;
+  border: none;
   position: absolute;
   top: 22%;
   right: 5%;
@@ -168,7 +178,9 @@ main {
   opacity: 0.5;
   pointer-events: none;
 }
-
+.modal-outer {
+  display: none;
+}
 @media (min-width: 809px) {
   .main-head {
     box-shadow: none;
@@ -271,6 +283,7 @@ main {
     width: auto;
   }
   .modal-outer {
+    display: block;
     min-height: 100vh;
     width: 100vw;
     background: rgba(0, 0, 0, 0.5);

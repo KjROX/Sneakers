@@ -6,14 +6,18 @@ const modalWindow = document.querySelector(".modal-outer");
 const crossSymbol = document.querySelector(".close-icon");
 const previousButton = document.querySelector(".previous-icon");
 const nextButton = document.querySelector(".next-icon");
+const pButt = document.querySelector(".previous");
+const nButt = document.querySelector(".next");
 const modalThumbnailImages = Array.from(
   document.querySelectorAll(".thumbnail")
 );
 const mainThumbnailImages = Array.from(
   document.querySelectorAll(".landing-thumbnail")
 );
+const carouselImages = Array.from(document.querySelectorAll(".landing-image"));
 let currentImage;
 let indexOfCurrentImage;
+let slidePosition = 0;
 
 //Functions
 
@@ -155,4 +159,21 @@ previousButton.addEventListener("click", () => {
     nextButton.classList.remove("opacity");
   }
   imageUpdationOnPressingButton(indexOfCurrentImage);
+});
+
+nButt.addEventListener("click", () => {
+  carouselImages[slidePosition].classList.remove("visible");
+  slidePosition++;
+  if (slidePosition === carouselImages.length) {
+    slidePosition = 0;
+  }
+  carouselImages[slidePosition].classList.add("visible");
+});
+pButt.addEventListener("click", () => {
+  carouselImages[slidePosition].classList.remove("visible");
+  slidePosition--;
+  if (slidePosition === -1) {
+    slidePosition = carouselImages.length - 1;
+  }
+  carouselImages[slidePosition].classList.add("visible");
 });
