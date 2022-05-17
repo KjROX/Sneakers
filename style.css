@@ -312,6 +312,7 @@ main {
     right: 0%;
   }
   .previous-icon {
+    border: none;
     position: absolute;
     top: 30%;
     left: -5%;
@@ -325,6 +326,7 @@ main {
     cursor: pointer;
   }
   .next-icon {
+    border: none;
     position: absolute;
     top: 30%;
     right: 5%;
